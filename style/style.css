@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+.cuerpo {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: aquamarine;
+}
+.cuerpo #timeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  height: 300px;
+  border: 3px solid #076bf7;
+  border-radius: 30px;
+  background-color: #076bf7;
+  margin: 10px auto;
+}
+.cuerpo #timeContainer #timeDisplay {
+  font-size: 75px;
+  color: #faf5f5;
+  font-family: consolas, monospace;
+}
+.cuerpo #timeContainer .btnContainer {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+}
+.cuerpo #timeContainer .btnContainer .timerBtn {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 60px;
+  border: 3px solid;
+  border-radius: 12px;
+  background-color: #fffefe;
+  color: rgba(245, 10, 10, 0.8274509804);
+  cursor: pointer;
+  font-family: consolas, monospace;
+  font-size: 30px;
+  margin: 0 15px 0 15px;
+  padding: 20px;
+}
+.cuerpo #timeContainer .btnContainer .timerBtn:hover {
+  transform: scale(1.2);
+  transition: ease-in 0.3s;
+}
+.cuerpo #timeContainer .btnContainer .timerBtn:active {
+  background-color: #f707b7;
+  transition: ease-out 0.2s;
+}/*# sourceMappingURL=style.css.map */
