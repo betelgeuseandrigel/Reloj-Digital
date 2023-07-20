@@ -11,7 +11,6 @@ let intervalId;
 let hrs = 0;
 let mins = 0;
 let secs = 0;
-let milSecs = 0;
 
 startBtn.addEventListener("click", () => {
     if(paused){
@@ -36,14 +35,12 @@ resetBtn.addEventListener("click", () => {
     hrs = 0;
     mins = 0;
     secs = 0;
-    milSecs = 0;
-    timeDisplay.textContent = "00:00:00:00";
+    timeDisplay.textContent = "00:00:00";
 });
 
 function updateTime(){
     elapsedTime = Date.now() - startTime;
 
-    milSecs = Math.floor((elapsedTime / 1000) * 60);
     secs = Math.floor((elapsedTime / 1000) % 60);
     mins = Math.floor((elapsedTime / (1000 * 60)) % 60);
     hrs = Math.floor((elapsedTime / (1000 * 60 * 60)) % 60);
@@ -52,12 +49,11 @@ function updateTime(){
         return (("0") + unit).length > 2 ? unit : "0" + unit;
     }
     
-    milSecs = pad(milSecs);
     secs = pad(secs);
     mins = pad(mins);
     hrs = pad(hrs);
 
-    timeDisplay.textContent = `${hrs}:${mins}:${secs}:${milSecs}`;
+    timeDisplay.textContent = `${hrs}:${mins}:${secs}`;
 
 }
 
